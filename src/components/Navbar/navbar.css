@@ -1,0 +1,37 @@
+.toggle.theme-controller {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    /* Set initial background color to white */
+    border-radius: 12.5px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.toggle.theme-controller::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 23px;
+    height: 23px;
+    background-color: black;
+    /* Set initial color of toggle circle to black */
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle.theme-controller:checked::before {
+    left: 25px;
+    background-color: white;
+    /* Change color of toggle circle to white when checked */
+}
+
+.theme-controller:checked {
+    background-color: black;
+    /* Change background color of toggle to black when checked */
+}
